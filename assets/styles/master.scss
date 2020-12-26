@@ -1,0 +1,15 @@
+// Configuration and MixIns
+@import "scss/01.config/config-import";
+// Global Styles
+@import "scss/02.styles/style-import";
+// Individual Components
+@import "scss/03.components/component-import";
+// Page Layouts
+@import "scss/04.layouts/layout-import";
+/*=== Global Overrides ===*/
+// (you shouldn't need these) //
+body{
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 96px 0;
+}

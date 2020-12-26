@@ -1,0 +1,6 @@
+// === BROWSER CONTEXT MIX-IN === //
+$browserContext: 16px;
+@function rem($pixels, $context: $browserContext) {
+  @return ($pixels / $context) * 1rem;
+}
+// === /BROWSER CONTEXT MIX-IN ===//

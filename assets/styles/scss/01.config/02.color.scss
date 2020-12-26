@@ -1,0 +1,49 @@
+// === COLORS === //
+$colors:(
+  neutral: (
+  00: #FFFFFF,
+  01: #F9F9FA,
+  02: #DADBDE,
+  03: #C2C4C8,
+  04: #AAACB2,
+  05: #93959C,
+  06: #7B7E87,
+  07: #636671,
+  08: #4B4F5B,
+  09: #333846,
+  10: #262B3A
+  ),
+  action: (
+	01: #D8F7FE,
+	02: #B0EBFD,
+	03: #89DBFB,
+	04: #6AC9F9,
+	05: #2FAEF6,
+	06: #1A89D3,
+	07: #0667B0,
+	08: #00498D,
+	09: #003475
+  ),
+  green: (
+	lightest: #EBFBEE,
+	light: #D3F9D8,
+	base: #40C057,
+	dark: #2B8A3E
+  ),
+  red: (
+	lightest:#FFF5F5,
+	light: #FFE3E3,
+	base: #FA5252,
+	dark: #C92A2A
+  ),
+  orange: (
+	lightest: #FFF4E6,
+	light: #FFE8CC,
+	base: #FD7E14,
+	dark: #D9480F
+  )
+);
+@function color($color, $tone: 'base') {
+  @return map-get(map-get($colors, $color), $tone);
+}
+// === /COLOR === //

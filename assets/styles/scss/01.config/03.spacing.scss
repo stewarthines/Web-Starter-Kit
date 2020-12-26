@@ -1,0 +1,51 @@
+// === GRIDS, LAYOUTS, & SPACING === //
+// === VERTICAL GRID === //
+$vert-grid-base: rem(8px);
+$vertGrid:(
+	00: $vert-grid-base*0,
+	01: $vert-grid-base*1,
+	02: $vert-grid-base*2,
+	03: $vert-grid-base*3,
+	04: $vert-grid-base*4,
+	05: $vert-grid-base*5,
+	06: $vert-grid-base*6,
+	07: $vert-grid-base*7,
+	08: $vert-grid-base*8,
+	09: $vert-grid-base*9,
+	10: $vert-grid-base*10,
+	12: $vert-grid-base*12,
+	13: $vert-grid-base*13,
+	16: $vert-grid-base*16,
+	18: $vert-grid-base*18,
+	24: $vert-grid-base*24
+);
+@function vertGrid($key){
+  @if map-has-key($vertGrid, $key){
+	@return map-get($vertGrid, $key);
+  }
+  @warn "Unknown `$key` in $vertGrid.";
+  @return null;
+}
+// === VERTICAL GRID === //
+// === SPACING === //
+$spacing:(
+  x-small: vertGrid(02),
+  small: vertGrid(03),
+  medium: vertGrid(04),
+  large: vertGrid(06),
+  x-large: vertGrid(09)
+);
+@function spacing($key){
+  @return map-get($spacing, $key);
+}
+// === /SPACING === //
+// === GRIDS & CONTAINERS === //
+// CONTAINER VARIABLES
+$container-width: 95%;
+$container-max-width: rem(1080px);
+$grid-gap: rem(36px);
+// BREAK POINTS
+$bp-sm:rem(767px);
+$bp-md:rem(1025px);
+$bp-lg:rem(1223px);
+// === /BREAK POINTS === //
