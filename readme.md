@@ -23,5 +23,4 @@ This project contains styles and scripts for websites. There are four layouts av
 - Figma Files
 
 
-
-not really sure what's up with GitHub right now, but I can't publish this dumb thing. 
+Github really screwed me up with the new "main" branch and pushing me to master. It pushed files i didn't want pushed, it ignored my gitignore file... i dunno... i'm frustrated.
