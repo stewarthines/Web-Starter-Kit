@@ -1,0 +1,63 @@
+$border-radius: 8px;
+$default-transition-time-easing: 350ms ease-in-out;
+// === BTN === //
+.btn{
+	display:inline-block;
+	color: $action-text;
+	padding: 11px 32px;
+	border: 1px solid $action-text;
+	border-radius: $border-radius;
+	line-height: 24px;
+	font-weight: 400;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	vertical-align: middle;
+	outline: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	transition: all $default-transition-time-easing;
+	&:hover{
+		transition: all $default-transition-time-easing;
+		box-shadow: 0px 2px 6px rgba(0, 52, 117, 0.28), 0px 6px 12px rgba(0, 52, 117, 0.17);
+		cursor: pointer;
+	}
+	&:focus{
+		transition: all $default-transition-time-easing;
+		box-shadow: inset 0px 3px 6px rgba(0, 52, 117, 0.50);
+	}
+}
+// === BTN === //
+// === BTN PRIMARY === //
+.btn-primary{
+	@extend .btn;
+	border: none;
+	background: color(action, 08);
+	color: color(neutral, 00);
+	&:hover{
+		color: white;
+		background: color(action, 08);
+		box-shadow: 0px 4px 8px rgba(0, 52, 117, 0.39), 0px 9px 12px rgba(0, 52, 117, 0.17);
+	}
+	&:focus{
+		background: color(action, 08);
+	}
+}
+// === /BTN PRIMARY === //
+// === BTN MINIMAL === //
+.btn-minimal{
+	@extend .btn;
+	border-color: transparent;
+	padding: 12px 32px;
+	&:hover{
+		background: color(neutral, 02);
+		box-shadow: none;
+		border-color: color(action, 04);
+	}
+	&:focus{
+		background: color(neutral,02);
+	}
+}
+// === BTN MINIMAL === //

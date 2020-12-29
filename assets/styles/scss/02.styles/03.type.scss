@@ -1,6 +1,7 @@
 // === Global Type Settings === //
 body,
 html{
+	color: $default-font-color;
 	font-family: $default-font-family;
 	font-size: $default-font-size;
 	font-weight: 300;
@@ -9,20 +10,23 @@ html{
 }
 
 // === Headings === //
-$heading-color: color(neutral, 09);
+
 h1, h2, h3, h4{
 	display: block;
 	color: $heading-color;
 	font-weight: 500;
 	font-style: normal;
 }
-
-h1{
+h1, .large-title{
 	margin-bottom: 48px;
 	margin-top: 24px;
-	font-size: 29px;
-	line-height: 48px;
+	color: $title-color;
+	font-weight: 700;
 	letter-spacing: 0.38%;
+	line-height: 48px;
+}
+h1{
+	font-size: 29px;
 }
 h2{
 	margin-bottom: 24px;
@@ -39,6 +43,7 @@ h3{
 	letter-spacing: -0.45%;	
 }
 h4{
+	color: $heading-color;
 	font-size: $default-font-size;	
 	line-height: $default-line-height;
 	letter-spacing: -0.43%;
@@ -111,13 +116,7 @@ small{
 }
 .large-title{
 	display: block;
-	margin-top: 24px;
-	margin-bottom: 48px;
-	color: color(neutral, 10);
 	font-size: 32px;
-	font-weight: 700;
-	letter-spacing: 0.38%;
-	line-height: 48px;
 }
 .lead{
 	font-size: 24px;
@@ -136,6 +135,7 @@ small{
 .caption-2{
 	font-size: 10px;
 	text-transform: uppercase;
+	letter-spacing:15%;
 }
 // === Elements === //
 hr{

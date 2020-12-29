@@ -1,4 +1,4 @@
-// === COLORS === //
+// === COLOR MAP === //
 $colors:(
   neutral: (
   00: #FFFFFF,
@@ -14,36 +14,68 @@ $colors:(
   10: #262B3A
   ),
   action: (
-	01: #D8F7FE,
-	02: #B0EBFD,
-	03: #89DBFB,
-	04: #6AC9F9,
+	01: #DCF2FE,
+	02: #BAE4FC,
+	03: #97D7FB,
+	04: #74C9F9,
 	05: #2FAEF6,
-	06: #1A89D3,
-	07: #0667B0,
-	08: #00498D,
-	09: #003475
+	06: #0A99EA,
+	07: #087ABB,
+	08: #065C8C,
+	09: #043D5E,
+  10: #021F2F
   ),
-  green: (
-	lightest: #EBFBEE,
-	light: #D3F9D8,
-	base: #40C057,
-	dark: #2B8A3E
+  caution: (
+  01: #FEF9DC,
+  02: #FCF3BA,
+  03: #FBEC97,
+  04: #F9E674,
+  05: #F6DA2F,
+  06: #EACB0A,
+  07: #BBA208,
+  08: #8C7A06,
+  09: #5E5104,
+  10: #2F2902 
   ),
-  red: (
-	lightest:#FFF5F5,
-	light: #FFE3E3,
-	base: #FA5252,
-	dark: #C92A2A
+  error: (
+	01: #FEDCE1,
+  02: #FCBAC3,
+  03: #FB97A5,
+  04: #F97487,
+  05: #F62F4B,
+  06: #EA0A2A,
+  07: #BB0821,
+  08: #8C0619,
+  09: #5E0411,
+  10: #2F0208 
   ),
-  orange: (
-	lightest: #FFF4E6,
-	light: #FFE8CC,
-	base: #FD7E14,
-	dark: #D9480F
+  success: (
+	01: #D8F6DE ,
+  02: #B2EDBE ,
+  03: #8BE49D ,
+  04: #64DC7D,
+  05: #2AB747,
+  06: #23993B ,
+  07: #1C7A2F,
+  08: #155C24,
+  09: #0E3D18,
+  10: #071E0C 
+  ),
+  brand: (
+    blue: #8BE2EE,
+    red: #FF9680,
+    yellow: #FFE78D
   )
 );
 @function color($color, $tone: 'base') {
   @return map-get(map-get($colors, $color), $tone);
 }
-// === /COLOR === //
+// === /COLOR MAP=== //
+// === TEXT COLORS === //
+// Accessible text colors
+$neutral-text: color(neutral, 08); // AA 6.4
+$action-text: color(action, 08); // AAA 7.2
+$caution-text: color(caution, 09); // AAA 7.9
+$error-text: color(error, 08); // AAA 9.7
+$success-text: color(success, 08); // AAA 8.1
+// === TEXT COLORS === //
