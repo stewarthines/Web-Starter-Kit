@@ -19,8 +19,8 @@ This project contains styles and scripts for websites. There are four layouts av
 - `master.scss` imports all the style files
 
 ## Resources:
-- Notion Documentation
-- Figma Files
+- [Notion Documentation](https://www.notion.so/stewarthines/Starter-Kit-Design-System-33fcd9c1e67641da93033d5cff1ad635)
+- [Figma Files](https://www.figma.com/file/yCXZgK4OwpAhvsUNQFDxog/Starter-Kit?node-id=1%3A28)
 
 
 Github really screwed me up with the new "main" branch and pushing me to master. It pushed files i didn't want pushed, it ignored my gitignore file... i dunno... i'm frustrated.
