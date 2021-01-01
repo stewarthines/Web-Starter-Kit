@@ -3,7 +3,7 @@
 <html lang="en-US">
 <head>	
 	<meta charset="utf-8">
-	<title>Generic Page</title>
+	<title>Generic Page | Starter Kit</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Stewart Hines" />
 	<meta name="Description" content="..." />
@@ -11,27 +11,53 @@
 	<link href="assets/styles/master.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<!-- THE HEADER -->	
-  <header id="siteHeader">
-	  <h2>Generic Page</h2>
-  </header>
-<!-- /THE HEADER -->  
+<!-- === THE HEADER ===-->
+<header id="siteHeader" class="the-header">
+	<div class="header-content">
+		<h1 class="site-title">
+			Starter Kit
+		</h1>
+		<!-- Primary Nav -->			
+		<nav class="primary-nav">
+			<ul>
+				<li>
+					<a href="index.html">Style Guide</a>
+				</li>
+				<li>
+					<a href="home.html">Home Layout</a>
+				</li>
+				<li>
+					<a href="list.html">List View</a>
+				</li>
+				<li>
+					<a href="post.html">Post View</a>
+				</li>
+				<li>
+					<a href="page.html" class="active">Generic Page</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- /Primary Nav -->
+	</div>
+</header>
+<!-- === THE HEADER ===-->
   <main id="siteBody">	
-	  <section>
-		  <h1>Personal Design System</h1>
-		  <ul>
-			  <li><a href="index.html">Index</a></li>
-			  <li><a href="home.html">Home Page Layout</a></li>
-			  <li><a href="list.html">List View</a></li>
-			  <li><a href="post.html">Post View</a></li>
-			  <li><a href="page.html">Generic Page View</a></li>
-		  </ul>
-	  </section>  
+	  
   </main> 
 <!-- THE FOOTER -->  
-  <footer id="siteFooter">
-	  <h2>The footer</h2>
-  </footer>
+<footer id="siteFooter" class="the-footer">
+	<div class="footer-content">
+		<div>
+			<svg width="72" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48 30l-21-8 2-17H0l1-5 46 1h23l2 15-1 16-23-2z" fill="#D25CF7"/></svg>
+		</div>
+		<div>
+			&copy;2021 Stewart Hines
+		</div>
+		<div>
+			<a id="backToTopBtn" href="#siteHeader">Back To Top</a>	
+		</div>			
+	</div>	
+</footer>
 <!-- /THE FOOTER -->  
   <script src="..." type="text/javascript"></script> 
 </body>
