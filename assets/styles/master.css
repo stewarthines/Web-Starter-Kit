@@ -38,6 +38,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -215,10 +220,10 @@ small {
   font-size: 32px; }
 
 .lead {
-  font-size: 24px;
+  font-size: 21px;
   line-height: 32px;
   letter-spacing: -0.45%;
-  font-weight: 300;
+  font-weight: 200;
   color: #333846; }
 
 .caption-1, .form-group label, .form-group .help-text, .caption-2 {
@@ -396,6 +401,9 @@ table.border {
 
 section {
   padding: 96px 0; }
+
+section.bg-gray {
+  background: #F9F9FA; }
 
 header.the-header .header-content {
   display: flex;

@@ -2,6 +2,11 @@
 // === Variables === //
 
 // === Grid Classes === //
+img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
 // Global Containers
 .container{
   display: grid;  
