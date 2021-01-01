@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Site Title</title>
+	<title>Starter Kit</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Stewart Hines" />
 	<meta name="Description" content="..." />
@@ -16,22 +16,25 @@
 	<header id="siteHeader" class="the-header">
 		<div class="header-content">
 			<h1 class="site-title">
-				Site Title
+				Starter Kit
 			</h1>
 			<!-- Primary Nav -->			
 			<nav class="primary-nav">
 				<ul>
 					<li>
-						<a href="#" class="active">Current Page</a>
+						<a href="index.html" class="active">Style Guide</a>
 					</li>
 					<li>
-						<a href="#">Nav Item</a>
+						<a href="home.html">Home Layout</a>
 					</li>
 					<li>
-						<a href="#">Nav Item</a>
+						<a href="list.html">List View</a>
 					</li>
 					<li>
-						<a href="#">Nav Item</a>
+						<a href="post.html">Post View</a>
+					</li>
+					<li>
+						<a href="page.html">Generic Page</a>
 					</li>
 				</ul>
 			</nav>
@@ -40,125 +43,278 @@
 	</header>
 	<!-- === THE HEADER ===-->
 	<!-- ==================  -->
-	<main id="siteBody">
+	<main id="siteBody">		
+		<section id="views">
+			<header class="container">
+				<div class="col-12">
+					<h1 class="large-title">Personal Design System</h1>		
+				</div>
+			</header>
+			<div class="container">
+				<div class="col-12">
+					<h2>
+						Views
+					</h2>
+				</div>
+				<div class="col-12">
+					<ul>
+						<li><a href="home.html">Home Page Layout</a></li>
+						<li><a href="list.html">List View</a></li>
+						<li><a href="post.html">Post View</a></li>
+						<li><a href="page.html">Generic Page View</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
 		<section id="type">
-			<h1 class="large-title">Personal Design System</h1>
-			<h1>Views</h1>
-			<ul>
-				<li><a href="home.html">Home Page Layout</a></li>
-				<li><a href="list.html">List View</a></li>
-				<li><a href="post.html">Post View</a></li>
-				<li><a href="page.html">Generic Page View</a></li>
-			</ul>
-			<hr>
-			<section>
-				<h1>Typography</h1>
-				<p>
-					The typographic styles employ an 8px grid system. I've divided the elements into headings, block level, and inline & styles.
-				</p>
-				<h2>Headings</h2>
-				<h1>Heading One</h1>
-				<h2>Heading Two</h2>
-				<h3>Heading Three</h3>
-				<h4>Heading Four</h4>
-				<h5>Heading Five</h5>
-				<h6>Heading Six</h6>
-				<h2>Block Level</h2>
-				<p>Paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit vel repellendus fugit in. Ipsa, rerum minus illo sint suscipit doloribus, optio aut, ad libero praesentium deleniti voluptatem fugiat repudiandae!</p>
-
-				<h2>Lists</h2>
-				<ul class="styled">
-					<li>List Item</li>
-					<li>List Item</li>
-					<li>List Item</li>
-				</ul>
-				<ol class="styled">
-					<li>List Item</li>
-					<li>List Item</li>
-					<li>List Item</li>
-				</ol>
-				<h2>Inline & Styles</h2>
-				<ul>
-					<li><a href="#">Anchor Link</a></li>
-					<li><strong>Strong</strong></li>
-					<li><em>Emphasis</em></li>
-					<li><strong><em>Strong + Emphasis</em></strong></li>
-					<li><small>Small Text</small></li>
-					<li><span class="lead">Leader text</span></li>
-					<li><span class="caption-1">Caption 1</span></li>
-					<li><span class="caption-2">Caption 2</span></li>
-				</ul>
-			</section>
+			<header class="container">
+				<div class="col-12">
+					<h2>Typography</h2>
+					<p>
+						The typographic styles employ an 8px grid system. I've divided the elements into headings, block level, and inline & styles.
+					</p>
+				</div>
+			</header>
+			<div class="container">
+				<div class="col-12">
+					<h3>Block Level Text</h3>
+					<h1>Heading One</h1>
+					<h2>Heading Two</h2>
+					<h3>Heading Three</h3>
+					<h4>Heading Four</h4>
+					<h5>Heading Five</h5>
+					<h6>Heading Six</h6>
+					<p>Paragraph: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis velit vel repellendus fugit in. Ipsa, rerum minus illo sint suscipit doloribus, optio aut, ad libero praesentium deleniti voluptatem fugiat repudiandae!</p>
+					<h4>Lists</h4>
+					<ul class="styled">
+						<li>List Item</li>
+						<li>List Item</li>
+						<li>List Item</li>
+					</ul>
+					<ol class="styled">
+						<li>List Item</li>
+						<li>List Item</li>
+						<li>List Item</li>
+					</ol>
+				</div>
+			</div>
+			<div class="container">
+				<div class="col-12">
+					<h3>Inline & Styles</h3>
+					<ul>
+						<li><a href="#">Anchor Link</a></li>
+						<li><strong>Strong</strong></li>
+						<li><em>Emphasis</em></li>
+						<li><strong><em>Strong + Emphasis</em></strong></li>
+						<li><small>Small Text</small></li>
+						<li><span class="lead">Leader text</span></li>
+						<li><span class="caption-1">Caption 1</span></li>
+						<li><span class="caption-2">Caption 2</span></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="grid">
+			<header class="container">
+				<div class="col-12">
+					<h1>12-Col Grid</h1>
+				</div>
+			</header>
+			<!-- Col 1 -->
+			<div class="container test" id="col1">
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+				<div class="col-1"><strong>One</strong></div>
+			</div>
+			<!-- /COl 1 -->
+			<!-- COL 2 -->
+			<div class="container test" id="col2">
+				<div class="col-2"><strong>Two</strong></div>
+				<div class="col-2"><strong>Two</strong></div>
+				<div class="col-2"><strong>Two</strong></div>
+				<div class="col-2"><strong>Two</strong></div>
+				<div class="col-2"><strong>Two</strong></div>
+				<div class="col-2"><strong>Two</strong></div>
+			</div>
+			<!-- /COL 2 -->
+			<!-- COL 3 -->
+			<div class="container test" id="col3">
+				<div class="col-3"><strong>Three</strong></div>
+				<div class="col-3"><strong>Three</strong></div>
+				<div class="col-3"><strong>Three</strong></div>
+				<div class="col-3"><strong>Three</strong></div>
+			</div>
+			<!-- /Col 3 -->
+			<!-- COL 4 -->
+			<div class="container test" id="col4">
+				<div class="col-4">
+					<strong>Four</strong>
+				</div>
+				<div class="col-4">
+					<strong>Four</strong>
+				</div>
+				<div class="col-4">
+					<strong>Four</strong>
+				</div>
+			</div>
+			<!-- /COL 4 -->
+			<!-- COL 5 -->
+			<div class="container test" id="col5">
+				<div class="col-5"><strong>Five</strong></div>
+				<div class="col-7">Seven</div>
+			</div>
+			<!-- /COL 5 -->
+			<!-- COL 6 -->
+			<div class="container test" id="col6">
+				<div class="col-6"><strong>Six</strong></div>
+				<div class="col-6"><strong>Six</strong></div>
+			</div>
+			<!-- /COL 6 -->
+			<!-- COL 7 -->
+			<div class="container test" id="col7">
+				<div class="col-7"><strong>Seven</strong></div>
+				<div class="col-5">Five</div>
+			</div>
+			<!-- /COL 7 -->
+			<!-- COL 8 -->
+			<div class="container test" id="col8">
+				<div class="col-8"><strong>Eight</strong></div>
+				<div class="col-4">Four</div>
+			</div>
+			<!-- /COL 8 -->
+			<!-- COL 9 -->
+			<div class="container test" id="col9">
+				<div class="col-9"><strong>Nine</strong></div>
+				<div class="col-3">Three</div>
+			</div>
+			<!-- /COL 9 -->
+			<!-- COL 10 -->
+			<div class="container test" id="col10">
+				<div class="col-10"><strong>Ten</strong></div>
+				<div class="col-2">Two</div>
+			</div>
+			<!-- /COL 10 -->
+			<!-- COL 11 -->
+			<div class="container test" id="col11">
+				<div class="col-11">
+					<strong>
+						Eleven
+					</strong>
+				</div>
+				<div class="col-1">
+					One
+				</div>
+			</div>
+			<!-- /COL 11 -->
+			<!-- COL 12 -->
+			<div class="container test" id="col12">
+				<div class="col-12">
+					<strong>Twelve</strong>
+				</div>
+			</div>
+			<!-- /COL 12 -->
 		</section>
 		<section id="tables">
-			<h1>Tables</h1>
-			<table class="border lrg stripped">
-				<thead>
-					<tr>
-						<th>Col One</th>
-						<th>Col Two</th>
-						<th>Col Three</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Cell One</td>
-						<td>Cell Two</td>
-						<td>Cell Three</td>
-					</tr>
-					<tr>
-						<td>Cell One</td>
-						<td>Cell Two</td>
-						<td>Cell Three</td>
-					</tr>
-					<tr>
-						<td>Cell One</td>
-						<td>Cell Two</td>
-						<td>Cell Three</td>
-					</tr>
-					<tr>
-						<td>Cell One</td>
-						<td>Cell Two</td>
-						<td>Cell Three</td>
-					</tr>
-					<tr>
-						<td>Cell One</td>
-						<td>Cell Two</td>
-						<td>Cell Three</td>
-					</tr>
-				</tbody>
-			</table>
+			<header class="container">
+				<div class="col-12">
+					<h2>Tables</h2>
+				</div>
+			</header>
+			<div class="container">
+				<div class="col-12">
+				<table class="border lrg stripped">
+					<thead>
+						<tr>
+							<th>Col One</th>
+							<th>Col Two</th>
+							<th>Col Three</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Cell One</td>
+							<td>Cell Two</td>
+							<td>Cell Three</td>
+						</tr>
+						<tr>
+							<td>Cell One</td>
+							<td>Cell Two</td>
+							<td>Cell Three</td>
+						</tr>
+						<tr>
+							<td>Cell One</td>
+							<td>Cell Two</td>
+							<td>Cell Three</td>
+						</tr>
+						<tr>
+							<td>Cell One</td>
+							<td>Cell Two</td>
+							<td>Cell Three</td>
+						</tr>
+						<tr>
+							<td>Cell One</td>
+							<td>Cell Two</td>
+							<td>Cell Three</td>
+						</tr>
+					</tbody>
+				</table>	
+				</div>
+			</div>
 		</section>
 		<section id="buttons">
-			<h1>Buttons</h1>
-			<ul>
-				<li>
-					<a href="#" class="btn">Default</a>		
-				</li>
-				<li>
-					<a href="#" class="btn-primary">Primary</a>		
-				</li>
-				<li>
-					<a href="#" class="btn-minimal">Minimal</a>
-				</li>
-<!--				<li>
-					<a href="#" class="btn danger">Danger</a>		
-				</li>
-				<li>
-					<a href="#" class="btn success">Success</a>		
-				</li>
-				<li>
-					<a href="#" class="btn disabled">Disabled</a>		
-				</li> -->
-			</ul>
-			
+			<header class="container">
+				<div class="col-12">
+					<h2>Buttons</h2>
+				</div>
+			</header>
+			<div class="container">
+				<div class="col-12">
+					<ul>
+						<li>
+							<a href="#" class="btn">Default</a>		
+						</li>
+						<li>
+							<a href="#" class="btn-primary">Primary</a>		
+						</li>
+						<li>
+							<a href="#" class="btn-minimal">Minimal</a>
+						</li>
+		<!--				<li>
+							<a href="#" class="btn danger">Danger</a>		
+						</li>
+						<li>
+							<a href="#" class="btn success">Success</a>		
+						</li>
+						<li>
+							<a href="#" class="btn disabled">Disabled</a>		
+						</li> -->
+					</ul>	
+				</div>
+			</div>
 		</section>
 		<section id="forms">
-			<h1>Forms</h1>
-			<div class="form-group">
-				<label for="sampleInput">Sample Input</label>
-				<input type="text" name="sampleInput" id="sampleInput" placeholder="Sample Input" />
-				<span class="help-text show">Helper Text</span>
+			<header class="container">
+				<div class="col-12">
+					<h1>Forms</h1>
+				</div>
+			</header>
+			<div class="container">
+				<div class="col-12">
+					<div class="form-group">
+						<label for="sampleInput">Sample Input</label>
+						<input type="text" name="sampleInput" id="sampleInput" placeholder="Sample Input" />
+						<span class="help-text show">Helper Text</span>
+					</div>	
+				</div>
 			</div>
 		</section>
 	</main>

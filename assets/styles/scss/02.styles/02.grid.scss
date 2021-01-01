@@ -1,0 +1,104 @@
+// === 12 Column Responsive CSS Grid === //
+// === Variables === //
+
+// === Grid Classes === //
+// Global Containers
+.container{
+  display: grid;  
+  grid-template-columns: 1fr;
+  grid-column-gap: $grid-gap;
+  grid-row-gap: $grid-gap;
+  width: $container-width;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+// === For Testing === //
+.container.test{
+  background: rgba(#EA4C89, .17);
+  padding-bottom: $grid-gap;
+  [class^='col-']{
+	  background: rgba(#EA4C89, .39);
+	  text-align: center;
+	  border-radius: rem(3px);
+	  padding: rem(6px) 0;
+	}
+}
+// === /TESTING === //
+// ===================== //
+// === Small Screens === //
+[class^='col-']{
+  grid-column: span 1;
+}
+// === Medium Screens === //
+@media screen and (min-width:$bp-sm) and (max-width:$bp-md){
+  .container{
+	grid-template-columns: repeat(4, 1fr);
+  }
+  .col-3,
+  .col-2,
+  .col-1{
+	grid-column: span 1;
+  }
+  .col-6,
+  .col-5,
+  .col-4{
+	grid-column: span 2;
+  }
+  .col-12,
+  .col-11,
+  .col-10,
+  .col-9,
+  .col-8,
+  .col-7{
+	grid-column: span 4;
+  }
+}
+// === Large Screens === //
+@media screen and (min-width:$bp-md) {
+  .container{
+	grid-template-columns: repeat(12, 1fr);
+  }
+  .col-1 {
+	grid-column: span 1;
+  }
+  .col-2 {
+	grid-column: span 2;
+  }
+  .col-3 {
+	grid-column: span 3;
+  }
+  .col-4 {
+	grid-column: span 4;
+  }
+  .col-5 {
+	grid-column: span 5;
+  }
+  .col-6 {
+	grid-column: span 6;
+  }
+  .col-7 {
+	grid-column: span 7;
+  }
+  .col-8 {
+	grid-column: span 8;
+  }
+  .col-9 {
+	grid-column: span 9;
+  }
+  .col-10 {
+	grid-column: span 10;
+  }
+  .col-11 {
+	grid-column: span 11;
+  }
+  .col-12 {
+	grid-column: span 12;
+  }
+}
+// === / COLUMNS === //
+// === Nested Containers ===//
+.container .container{
+  width: 100%;
+}
+// === / NESTED CONTAINERS === //
