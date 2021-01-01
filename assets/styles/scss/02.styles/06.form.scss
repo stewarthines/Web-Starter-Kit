@@ -1,0 +1,54 @@
+//=== Forms ===/
+.form-group{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: stretch;
+	width: 100%;
+	box-sizing: border-box;
+	input{
+		position: relative;
+		padding: 11px 8px;
+		flex: 1 1 auto;
+		position: relative;
+		color: color(neutral, 09);
+		font-size: $default-font-size;
+		font-weight: 300;
+		line-height: $default-line-height;
+		border-radius: $default-border-radius;
+		border: $basic-border;
+		outline: none;
+		transition: all $default-transition-time-easing;
+		&:focus{
+			transition: all $default-transition-time-easing;
+			border-color: color(action, 05);
+			box-shadow: 0px 0px 8px rgba(26, 137, 211, 0.28);
+		}
+	}
+	label, .help-text{
+		@extend .caption-1;
+		flex: 1 1 auto;
+		position: relative;
+		text-indent: 8px;
+	}
+	label{
+		font-weight: 500;
+		color: color(neutral, 08);
+	}
+	.help-text{
+		display: none; 
+		visibility: hidden;
+		&.show{
+			display: block; 
+			visibility: visible;
+		}
+	}
+}
+//=== /Forms ===/
+//=== Placeholder ===/
+::placeholder{
+	color:color(neutral, 06);
+	font-weight: 300;
+}
+//=== /Placeholder ===/

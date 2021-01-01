@@ -12,13 +12,36 @@
 </head>
 
 <body>
-	<!-- THE HEADER -->
-	<header id="siteHeader">
-		<h2>The header</h2>
+	<!-- === THE HEADER ===-->
+	<header id="siteHeader" class="the-header">
+		<div class="header-content">
+			<h1 class="site-title">
+				Site Title
+			</h1>
+			<!-- Primary Nav -->			
+			<nav class="primary-nav">
+				<ul>
+					<li>
+						<a href="#" class="active">Current Page</a>
+					</li>
+					<li>
+						<a href="#">Nav Item</a>
+					</li>
+					<li>
+						<a href="#">Nav Item</a>
+					</li>
+					<li>
+						<a href="#">Nav Item</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- /Primary Nav -->
+		</div>
 	</header>
-	<!-- /THE HEADER -->
+	<!-- === THE HEADER ===-->
+	<!-- ==================  -->
 	<main id="siteBody">
-		<section>
+		<section id="type">
 			<h1 class="large-title">Personal Design System</h1>
 			<h1>Views</h1>
 			<ul>
@@ -67,9 +90,9 @@
 				</ul>
 			</section>
 		</section>
-		<section>
+		<section id="tables">
 			<h1>Tables</h1>
-			<table>
+			<table class="border lrg stripped">
 				<thead>
 					<tr>
 						<th>Col One</th>
@@ -130,10 +153,29 @@
 			</ul>
 			
 		</section>
+		<section id="forms">
+			<h1>Forms</h1>
+			<div class="form-group">
+				<label for="sampleInput">Sample Input</label>
+				<input type="text" name="sampleInput" id="sampleInput" placeholder="Sample Input" />
+				<span class="help-text show">Helper Text</span>
+			</div>
+		</section>
 	</main>
+	<!-- ==================  -->
 	<!-- THE FOOTER -->
-	<footer id="siteFooter">
-		<h2>The footer</h2>
+	<footer id="siteFooter" class="the-footer">
+		<div class="footer-content">
+			<div>
+				<svg width="72" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M48 30l-21-8 2-17H0l1-5 46 1h23l2 15-1 16-23-2z" fill="#D25CF7"/></svg>
+			</div>
+			<div>
+				&copy;2021 Stewart Hines
+			</div>
+			<div>
+				<a id="backToTopBtn" href="#siteHeader">Back To Top</a>	
+			</div>			
+		</div>	
 	</footer>
 	<!-- /THE FOOTER -->
 	<script src="..." type="text/javascript"></script>

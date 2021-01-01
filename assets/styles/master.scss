@@ -8,8 +8,11 @@
 @import "scss/04.layouts/layout-import";
 /*=== Global Overrides ===*/
 // (you shouldn't need these) //
-body{
-	max-width: 720px;
+main{
+	max-width: $container-max-width;
 	margin: 0 auto;
+	padding-bottom: 96px;
+}
+section{
 	padding: 96px 0;
 }

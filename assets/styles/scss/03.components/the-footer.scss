@@ -1,0 +1,29 @@
+//=== The Footer ===//
+$the-footer-color: color(neutral, 10);
+
+footer.the-footer{
+	position: relative;
+	padding: 112px 0;
+	background: $the-footer-color;
+	color: color(neutral, 00);
+	.footer-content{
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 32px;
+		margin: 0 auto;
+		position: relative;
+		width: 100%;
+		max-width: 384px;
+		text-align: center;
+	}
+}
+#backToTopBtn{	
+	@extend .btn-minimal;
+	color: color(neutral, 02);
+	border: none;
+	&:hover{
+		border: none;
+		background: darken( color(neutral, 10), 2% );
+	}
+}

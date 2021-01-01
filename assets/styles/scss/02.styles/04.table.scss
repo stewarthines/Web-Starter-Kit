@@ -1,16 +1,67 @@
+
+//=== Table ===//
 table{
 	border-spacing: 0.5rem;
 	border-collapse: collapse;
+	font-size: 14px;
+	line-height: 24px;
+	border-radius: $default-border-radius;
+	tr:first-child{}
 }
 
 table tr{
-	background: green;
+	
+}
+
+thead{
+	border-top-left-radius: $default-border-radius;
+	border-top-right-radius: $default-border-radius;
+}
+
+table th{
+	line-height: 15px;
+	padding: 8px 0;
+	font-weight: 500;
 }
 
 table td{
-padding: 12px;
+	line-height: 24px;
+	padding: 12px;
+}
+//=== Table ===//
+//=== Sizes ===//
+
+table.sml th,
+table.sml td{
+	padding: 4px 8px;
 }
 
-// Stripped
-
-// Bordered
+table.med td{
+	padding: 12px;
+}
+table.lrg td{
+	padding: 16px;
+}
+//=== Stripped ===//
+table.stripped{
+	thead, tr:nth-child(even){
+		background: color(neutral, 01);
+	}
+}
+//=== /Stripped ===//
+//===Bordered ===//
+table.border{
+	border: $basic-border;
+	tr{
+		border-bottom: $basic-border;	
+		line-height: 15px;
+	}
+	td{
+		line-height: 23px;
+		border-right: $basic-border;
+		&:last-child{
+			border-right: none;
+		}
+	}
+}
+//===Bordered ===//

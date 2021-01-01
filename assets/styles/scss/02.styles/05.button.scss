@@ -1,12 +1,11 @@
-$border-radius: 8px;
-$default-transition-time-easing: 350ms ease-in-out;
+
 // === BTN === //
 .btn{
 	display:inline-block;
 	color: $action-text;
 	padding: 11px 32px;
 	border: 1px solid $action-text;
-	border-radius: $border-radius;
+	border-radius: $default-border-radius;
 	line-height: 24px;
 	font-weight: 400;
 	text-align: center;
