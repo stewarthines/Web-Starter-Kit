@@ -1,0 +1,7 @@
+$default-section-padding: 96px 0;
+section{
+	padding: $default-section-padding;
+}
+section.bg-gray{
+	background: color(neutral,01);
+}
