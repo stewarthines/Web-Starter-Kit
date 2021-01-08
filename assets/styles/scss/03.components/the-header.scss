@@ -1,34 +1,134 @@
-header.the-header {
-	padding: 0 16px;
 
+$header-color: color(neutral, 00);
+$menu-trigger-target-size: 72px;
+$trigger-translate: 22px;
+
+
+header.the-header {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	padding: 0 16px;
+	background: $header-color;
+	
+	//=== HEADER PARTS ===//
 	.header-content {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		position: relative;
+		grid-template-columns: 1fr;
 		grid-template-areas:
-			"title title trigger"
-			"nav nav nav"
-			"footer footer footer"
+			"headerbar"
+			"nav"
 		;
 		align-content: center;
 		width: 100%;
 		max-width: $container-max-width;
 		margin: 0 auto;
+		background: $header-color;
+	}
+	//= Header Bar =// 
+	.header-bar{
+		display: flex;
+		position: relative;
+		z-index: 90;
+		top: 0;
+		background: $header-color;
+	}
+	//= /Header Bar =// 
+	//= Main menu =//
+	.main-menu{
+		background: $header-color;
+		grid-area: nav;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: fixed;
+		z-index: 80;
+		top: -100vh;
+		left: 0;
+		right: 0;
+		transition: all $default-transition-time-easing;
+		height: 0vh;
+		opacity: 0;
+		&.open{
+			height: 100vh;	
+			top: 72px;
+			left: 0;
+			right: 0;
+			padding: 0 16px;
+			opacity: 1;
+			transition: all $default-transition-time-easing;
+		}
+	}
+	//= /Main menu =//
+	//=== /HEADER PARTS ===//
+	&.open{
+		position: fixed;
 	}
 }
-
-// === MENU TRIGGER === //
+//=== /HEADER PARTS ===// 
+//=== MENU TRIGGER ===//
 header.the-header .menu-trigger {
+	display: flex;
+	position: relative;
+	right: 0;
+	justify-content: center;
+	align-items: center;
+	height: $menu-trigger-target-size;
+	width: $menu-trigger-target-size;
 	grid-area: trigger;
-	text-align: right;
-
+	&:focus,
+	&:hover{
+		background: transparent;
+	}
+	//= Trigger Icon =//
+	.trigger-icon{
+		width: 16px;
+		height: 2px;
+		background: color(neutral, 06);
+		border-radius: 1000px;
+		transition: all $default-transition-time-easing;
+		&:before,
+		&:after{
+			content: '';
+			position: absolute;
+			width: 16px;
+			height: 2px;
+			background: color(neutral, 06);
+			border-radius: 1000px;
+			transition: all $default-transition-time-easing;
+		}
+		&:before{
+			transform: translateY(-5px);
+		}
+		&:after{
+			transform: translateY(5px);
+		}
+	}
+	//= Trigger Icon Animation =// 
+	&.open .trigger-icon{
+		transform: translateX(32px);
+		background: transparent;
+	}
+	&.open .trigger-icon::before{
+		transform: rotate(45deg) translate(-$trigger-translate, $trigger-translate);
+	}
+	&.open .trigger-icon::after{
+		transform: rotate(-45deg) translate(-$trigger-translate, -$trigger-translate);
+	}
+	//= /Trigger Icon Animation =// 
+	//= /Trigger Icon =// 
+	
 	.sr-only {
 		display: none;
 		visibility: hidden;
 	}
 }
 
-// === /MENU TRIGGER === //
-// === SITE TITLE === //
+//=== /MENU TRIGGER ===//
+//=== SITE TITLE ===//
 header.the-header h1.site-title {
 	grid-area: title;
 	margin: 0;
@@ -40,9 +140,11 @@ header.the-header h1.site-title {
 }
 
 //=== /SITE TITLE ===//
+//=== MAIN MENU WRAPPER ===// 
+
+//=== /MAIN MENU WRAPPER ===//
 //=== PRIMARY NAV ===//
-nav.primary-nav {
-	grid-area: nav;
+nav.primary-nav {	
 	padding: 24px 0;
 	text-align: left;
 
@@ -84,9 +186,11 @@ nav.primary-nav {
 //=== /PRIMARY NAV ===//
 //=== NAV FOOTER ===// 
 footer.nav-footer {
+	position: relative;
+	bottom: 96px;
 	@extend .caption-1;
 	text-align: center;
-	grid-area: footer;
+	justify-self: flex-end;
 	padding: 28px 0;
 }
 
