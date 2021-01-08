@@ -545,7 +545,14 @@ footer.nav-footer {
       width: 95%;
       max-width: 1110px;
       grid-template-columns: 1fr auto;
-      grid-template-areas: "title nav nav"; }
+      grid-template-areas: "headerbar nav"; }
+    header.the-header .main-menu {
+      height: 72px;
+      display: block;
+      visibility: visible;
+      opacity: 1;
+      position: relative;
+      top: 0; }
     header.the-header .menu-trigger {
       display: none;
       visibility: hidden; }

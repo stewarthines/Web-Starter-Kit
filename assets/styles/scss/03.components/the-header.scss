@@ -202,17 +202,23 @@ footer.nav-footer {
 @media screen and (min-width:1024px) {
 	header.the-header {
 		padding: 0;
-
 		//=== HEADER CONTENT WRAPPER ===//
 		.header-content {
 			width: 95%;
 			max-width: $container-max-width;
 			grid-template-columns: 1fr auto;
 			grid-template-areas:
-				"title nav nav"
+				"headerbar nav"
 			;
 		}
-
+		.main-menu{
+			height: 72px;
+			display: block;
+			visibility: visible;
+			opacity: 1;
+			position: relative;
+			top: 0;
+		}
 		//=== /HEADER CONTENT WRAPPER ===//
 		//=== MENU TRIGGER ===//
 		.menu-trigger {
@@ -224,7 +230,6 @@ footer.nav-footer {
 		//=== PRIMARY NAV ===// 
 		nav.primary-nav {
 			padding: 0;
-
 			ul {
 				display: flex;
 				margin: 0;
