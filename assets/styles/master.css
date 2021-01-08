@@ -505,6 +505,11 @@ header.the-header h1.site-title {
   font-size: 16px;
   line-height: 24px;
   font-weight: 600; }
+  header.the-header h1.site-title a {
+    color: #262B3A;
+    text-decoration: none; }
+    header.the-header h1.site-title a:hover {
+      color: #333846; }
 
 nav.primary-nav {
   padding: 24px 0;

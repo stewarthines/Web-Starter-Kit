@@ -137,6 +137,13 @@ header.the-header h1.site-title {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 600;
+	a{
+		color: color(neutral, 10);
+		text-decoration: none;
+		&:hover{
+			color: color(neutral, 09);
+		}
+	}
 }
 
 //=== /SITE TITLE ===//
