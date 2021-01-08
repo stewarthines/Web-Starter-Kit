@@ -249,6 +249,9 @@ hr {
   max-width: 75%;
   background-color: #DADBDE; }
 
+.text-center {
+  text-align: center; }
+
 table {
   border-spacing: 0.5rem;
   border-collapse: collapse;
@@ -533,7 +536,7 @@ nav.primary-nav {
 
 .nav-footer {
   position: relative;
-  bottom: 96px;
+  bottom: 144px;
   text-align: center;
   justify-self: flex-end;
   padding: 28px 0; }
