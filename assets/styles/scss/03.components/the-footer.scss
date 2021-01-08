@@ -6,6 +6,7 @@ footer.the-footer{
 	padding: 112px 0;
 	background: $the-footer-color;
 	color: color(neutral, 00);
+	//= Footer Content =//
 	.footer-content{
 		display: grid;
 		align-items: center;
@@ -17,7 +18,38 @@ footer.the-footer{
 		max-width: 384px;
 		text-align: center;
 	}
+	//= /Footer Content =//
+	//= Icons =//
+	.ok svg,
+	.link a svg{
+		fill: color(neutral, 02);
+		transition: all $default-transition-time-easing;
+	}
+	.link a{
+		@extend .btn-minimal;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 12px;
+		border: none;
+		&:hover{
+			border: none;
+			background: darken( color(neutral, 10), 2% );
+			svg{
+				fill: color(neutral, 00);
+				transition: all $default-transition-time-easing;
+			}
+		}
+	}
+	.contact-grid{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin-bottom: 48px;
+	}
+	//= /Icons =//
 }
+//=== /THE FOOTER ===//
+//=== BACK TO TOP BTN ===//
 #backToTopBtn{	
 	@extend .btn-minimal;
 	color: color(neutral, 02);
@@ -27,3 +59,4 @@ footer.the-footer{
 		background: darken( color(neutral, 10), 2% );
 	}
 }
+//=== /BACK TO TOP BTN ===//

@@ -296,7 +296,7 @@ table.border {
     table.border td:last-child {
       border-right: none; }
 
-.btn, .btn-minimal, #backToTopBtn, .btn-primary {
+.btn, .btn-minimal, #backToTopBtn, footer.the-footer .link a, .btn-primary {
   display: inline-block;
   color: #065C8C;
   padding: 11px 32px;
@@ -314,11 +314,11 @@ table.border {
   -ms-user-select: none;
   user-select: none;
   transition: all 350ms ease-in-out; }
-  .btn:hover, .btn-minimal:hover, #backToTopBtn:hover, .btn-primary:hover {
+  .btn:hover, .btn-minimal:hover, #backToTopBtn:hover, footer.the-footer .link a:hover, .btn-primary:hover {
     transition: all 350ms ease-in-out;
     box-shadow: 0px 2px 6px rgba(0, 52, 117, 0.28), 0px 6px 12px rgba(0, 52, 117, 0.17);
     cursor: pointer; }
-  .btn:focus, .btn-minimal:focus, #backToTopBtn:focus, .btn-primary:focus {
+  .btn:focus, .btn-minimal:focus, #backToTopBtn:focus, footer.the-footer .link a:focus, .btn-primary:focus {
     transition: all 350ms ease-in-out;
     box-shadow: inset 0px 3px 6px rgba(0, 52, 117, 0.5); }
 
@@ -333,14 +333,14 @@ table.border {
   .btn-primary:focus {
     background: #065C8C; }
 
-.btn-minimal, #backToTopBtn {
+.btn-minimal, #backToTopBtn, footer.the-footer .link a {
   border-color: transparent;
   padding: 12px 32px; }
-  .btn-minimal:hover, #backToTopBtn:hover {
+  .btn-minimal:hover, #backToTopBtn:hover, footer.the-footer .link a:hover {
     background: #DADBDE;
     box-shadow: none;
     border-color: #74C9F9; }
-  .btn-minimal:focus, #backToTopBtn:focus {
+  .btn-minimal:focus, #backToTopBtn:focus, footer.the-footer .link a:focus {
     background: #DADBDE; }
 
 .form-group {
@@ -593,6 +593,26 @@ footer.the-footer {
     width: 100%;
     max-width: 384px;
     text-align: center; }
+  footer.the-footer .ok svg,
+  footer.the-footer .link a svg {
+    fill: #DADBDE;
+    transition: all 350ms ease-in-out; }
+  footer.the-footer .link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: none; }
+    footer.the-footer .link a:hover {
+      border: none;
+      background: #222634; }
+      footer.the-footer .link a:hover svg {
+        fill: #FFFFFF;
+        transition: all 350ms ease-in-out; }
+  footer.the-footer .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 48px; }
 
 #backToTopBtn {
   color: #DADBDE;
