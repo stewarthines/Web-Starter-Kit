@@ -185,7 +185,7 @@ nav.primary-nav {
 
 //=== /PRIMARY NAV ===//
 //=== NAV FOOTER ===// 
-footer.nav-footer {
+.nav-footer {
 	position: relative;
 	bottom: 96px;
 	@extend .caption-1;
@@ -248,7 +248,7 @@ footer.nav-footer {
 
 	//=== /PRIMARY NAV ===//
 	//=== NAV FOOTER ===// 
-	footer.nav-footer {
+	.nav-footer {
 		display: none;
 		visibility: hidden;
 	}
