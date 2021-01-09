@@ -5,3 +5,9 @@ section{
 section.bg-gray{
 	background: color(neutral,01);
 }
+section header.section-header{
+	@extend .container;
+	height: 128px;
+	margin-bottom: 72px;
+	text-align: center;
+}

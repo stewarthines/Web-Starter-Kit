@@ -1,6 +1,10 @@
 // === 12 Column Responsive CSS Grid === //
 // === Variables === //
-
+.col-4.offset-4{
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+$grid-small-margin: 16px;
 // === Grid Classes === //
 img{
   display: block;

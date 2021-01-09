@@ -41,25 +41,29 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.col-4.offset-4, .post-list .entry .offset-4.post-content {
+  grid-column-start: 5;
+  grid-column-end: 9; }
+
 img {
   display: block;
   width: 100%;
   max-width: 100%; }
 
-.container, .post-list .entry {
+.container, .post-list .entry, section header.section-header {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  width: 95%;
+  width: 88%;
   max-width: 1110px;
   margin-left: auto;
   margin-right: auto; }
 
-.container.test, .post-list .test.entry {
+.container.test, .post-list .test.entry, section header.test.section-header {
   background: rgba(234, 76, 137, 0.17);
   padding-bottom: 30px; }
-  .container.test [class^='col-'], .post-list .test.entry [class^='col-'] {
+  .container.test [class^='col-'], .post-list .test.entry [class^='col-'], section header.test.section-header [class^='col-'] {
     background: rgba(234, 76, 137, 0.39);
     text-align: center;
     border-radius: 0.1875rem;
@@ -69,7 +73,7 @@ img {
   grid-column: span 1; }
 
 @media screen and (min-width: 47.9375rem) and (max-width: 64.0625rem) {
-  .container, .post-list .entry {
+  .container, .post-list .entry, section header.section-header {
     grid-template-columns: repeat(4, 1fr); }
   .col-3,
   .col-2,
@@ -90,7 +94,7 @@ img {
     grid-column: span 4; } }
 
 @media screen and (min-width: 64.0625rem) {
-  .container, .post-list .entry {
+  .container, .post-list .entry, section header.section-header {
     grid-template-columns: repeat(12, 1fr); }
   .col-1 {
     grid-column: span 1; }
@@ -117,7 +121,7 @@ img {
   .col-12, .post-list .entry {
     grid-column: span 12; } }
 
-.container .container, .post-list .entry .container, .container .post-list .entry, .post-list .container .entry, .post-list .entry .entry {
+.container .container, .post-list .entry .container, .container .post-list .entry, .post-list .container .entry, .post-list .entry .entry, section header.section-header .container, section header.section-header .post-list .entry, .post-list section header.section-header .entry, .container section header.section-header, .post-list .entry section header.section-header, section .container header.section-header, section .post-list .entry header.section-header, .post-list section .entry header.section-header, section header.section-header header.section-header {
   width: 100%; }
 
 body,
@@ -412,6 +416,11 @@ section {
 
 section.bg-gray {
   background: #F9F9FA; }
+
+section header.section-header {
+  height: 128px;
+  margin-bottom: 72px;
+  text-align: center; }
 
 header.the-header {
   position: relative;
