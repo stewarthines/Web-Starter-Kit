@@ -12,7 +12,6 @@ menuTrigger.addEventListener('click', () => {
 		mainMenu.classList.add('open');
 		menuOpen = true;
 		body.style.paddingTop = "72px";
-		console.log("test");
 	} else{
 		menuTrigger.classList.remove('open');
 		theHeader.classList.remove('open');
@@ -22,3 +21,13 @@ menuTrigger.addEventListener('click', () => {
 	}
 });
 //=== /MENU ===//
+//=== SCROLL BUTTON ===//
+const scrollToTopBtn = document.querySelector('#backToTopBtn');
+function scrollToTop(){
+	body.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	});
+}
+scrollToTopBtn.addEventListner('click', scrollToTop);
+//=== /SCROLL BUTTON ===//
