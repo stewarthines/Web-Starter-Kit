@@ -46,7 +46,7 @@ img {
   width: 100%;
   max-width: 100%; }
 
-.container {
+.container, .post-list .entry {
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 30px;
@@ -56,10 +56,10 @@ img {
   margin-left: auto;
   margin-right: auto; }
 
-.container.test {
+.container.test, .post-list .test.entry {
   background: rgba(234, 76, 137, 0.17);
   padding-bottom: 30px; }
-  .container.test [class^='col-'] {
+  .container.test [class^='col-'], .post-list .test.entry [class^='col-'] {
     background: rgba(234, 76, 137, 0.39);
     text-align: center;
     border-radius: 0.1875rem;
@@ -69,7 +69,7 @@ img {
   grid-column: span 1; }
 
 @media screen and (min-width: 47.9375rem) and (max-width: 64.0625rem) {
-  .container {
+  .container, .post-list .entry {
     grid-template-columns: repeat(4, 1fr); }
   .col-3,
   .col-2,
@@ -77,18 +77,20 @@ img {
     grid-column: span 1; }
   .col-6,
   .col-5,
-  .col-4 {
+  .col-4,
+  .post-list .entry .post-content {
     grid-column: span 2; }
-  .col-12,
+  .col-12, .post-list .entry,
   .col-11,
   .col-10,
   .col-9,
   .col-8,
+  .post-list .entry .post-img,
   .col-7 {
     grid-column: span 4; } }
 
 @media screen and (min-width: 64.0625rem) {
-  .container {
+  .container, .post-list .entry {
     grid-template-columns: repeat(12, 1fr); }
   .col-1 {
     grid-column: span 1; }
@@ -96,7 +98,7 @@ img {
     grid-column: span 2; }
   .col-3 {
     grid-column: span 3; }
-  .col-4 {
+  .col-4, .post-list .entry .post-content {
     grid-column: span 4; }
   .col-5 {
     grid-column: span 5; }
@@ -104,7 +106,7 @@ img {
     grid-column: span 6; }
   .col-7 {
     grid-column: span 7; }
-  .col-8 {
+  .col-8, .post-list .entry .post-img {
     grid-column: span 8; }
   .col-9 {
     grid-column: span 9; }
@@ -112,10 +114,10 @@ img {
     grid-column: span 10; }
   .col-11 {
     grid-column: span 11; }
-  .col-12 {
+  .col-12, .post-list .entry {
     grid-column: span 12; } }
 
-.container .container {
+.container .container, .post-list .entry .container, .container .post-list .entry, .post-list .container .entry, .post-list .entry .entry {
   width: 100%; }
 
 body,
@@ -229,7 +231,7 @@ small {
   font-weight: 200;
   color: #333846; }
 
-.caption-1, .nav-footer, .form-group label, .form-group .help-text, .caption-2 {
+.caption-1, .post-list .entry .post-content .post-header small, .nav-footer, .form-group label, .form-group .help-text, .caption-2 {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -623,6 +625,17 @@ footer.the-footer {
   #backToTopBtn:hover {
     border: none;
     background: #222634; }
+
+.post-list .entry {
+  margin-bottom: 96px; }
+  .post-list .entry .post-content .post-header {
+    margin-bottom: 30px; }
+    .post-list .entry .post-content .post-header h3 {
+      margin-top: 0; }
+    .post-list .entry .post-content .post-header small {
+      color: #7B7E87; }
+  .post-list .entry .post-content p.lead {
+    color: #4B4F5B; }
 
 /*=== Global Overrides ===*/
 /*# sourceMappingURL=master.css.map */

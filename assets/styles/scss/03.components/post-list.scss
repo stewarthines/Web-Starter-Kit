@@ -1,0 +1,28 @@
+//=== POST LIST ===//
+.post-list .entry{
+	@extend .col-12;
+	@extend .container;
+	margin-bottom: 96px;
+	//= Post Parts =// 
+	.post-img{
+		@extend .col-8;
+	}
+	.post-content{
+		@extend .col-4;
+		.post-header{
+			margin-bottom: $grid-gap;
+			h3{
+				margin-top: 0;
+			}
+			small{
+				@extend .caption-1;
+				color: color(neutral, 06);
+			}
+		}
+		p.lead{
+			color: color(neutral, 08);
+		}
+	}
+	//= /Post Parts =//
+}
+//=== /POST LIST ===//
