@@ -1,19 +1,17 @@
-// === 12 Column Responsive CSS Grid === //
-// === Variables === //
-.col-4.offset-4{
-  grid-column-start: 5;
-  grid-column-end: 9;
-}
+//=== 12 Column Responsive CSS Grid ===//
+//=== Variables ===//
 $grid-small-margin: 16px;
-// === Grid Classes === //
-img{
+//=== /VARIABLES ====//
+//=== GRID UTILITIES ===//
+img {
   display: block;
   width: 100%;
   max-width: 100%;
 }
-// Global Containers
-.container{
-  display: grid;  
+//=== /GRID UTILITIES ===//
+//==== GLOBAL CONTAINER ====//
+.container {
+  display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: $grid-gap;
   grid-row-gap: $grid-gap;
@@ -22,92 +20,140 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
-// === For Testing === //
-.container.test{
+//==== /GLOBAL CONTAINER ====//
+//=== TESTING ===//
+.container.test {
   background: rgba(#EA4C89, .17);
   padding-bottom: $grid-gap;
-  [class^='col-']{
-	  background: rgba(#EA4C89, .39);
-	  text-align: center;
-	  border-radius: rem(3px);
-	  padding: rem(6px) 0;
-	}
+
+  [class^='col-'] {
+    background: rgba(#EA4C89, .39);
+    text-align: center;
+    border-radius: rem(3px);
+    padding: rem(6px) 0;
+  }
 }
-// === /TESTING === //
-// ===================== //
-// === Small Screens === //
-[class^='col-']{
+
+//=== /TESTING === //
+//=====================//
+//=== Small Screens ===//
+[class^='col-'] {
   grid-column: span 1;
 }
-// === Medium Screens === //
-@media screen and (min-width:$bp-sm) and (max-width:$bp-md){
-  .container{
-	grid-template-columns: repeat(4, 1fr);
+
+//=== Medium Screens ===//
+@media screen and (min-width:$bp-sm) and (max-width:$bp-md) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
   }
+
   .col-3,
   .col-2,
-  .col-1{
-	grid-column: span 1;
+  .col-1 {
+    grid-column: span 1;
   }
+
   .col-6,
   .col-5,
-  .col-4{
-	grid-column: span 2;
+  .col-4 {
+    grid-column: span 2;
   }
+
   .col-12,
   .col-11,
   .col-10,
   .col-9,
   .col-8,
-  .col-7{
-	grid-column: span 4;
-  }
-}
-// === Large Screens === //
-@media screen and (min-width:$bp-md) {
-  .container{
-	grid-template-columns: repeat(12, 1fr);
-  }
-  .col-1 {
-	grid-column: span 1;
-  }
-  .col-2 {
-	grid-column: span 2;
-  }
-  .col-3 {
-	grid-column: span 3;
-  }
-  .col-4 {
-	grid-column: span 4;
-  }
-  .col-5 {
-	grid-column: span 5;
-  }
-  .col-6 {
-	grid-column: span 6;
-  }
   .col-7 {
-	grid-column: span 7;
-  }
-  .col-8 {
-	grid-column: span 8;
-  }
-  .col-9 {
-	grid-column: span 9;
-  }
-  .col-10 {
-	grid-column: span 10;
-  }
-  .col-11 {
-	grid-column: span 11;
-  }
-  .col-12 {
-	grid-column: span 12;
+    grid-column: span 4;
   }
 }
-// === / COLUMNS === //
-// === Nested Containers ===//
-.container .container{
+
+//=== Large Screens ===//
+@media screen and (min-width:$bp-md) {
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .col-1 {
+    grid-column: span 1;
+  }
+
+  .col-2 {
+    grid-column: span 2;
+  }
+
+  .col-3 {
+    grid-column: span 3;
+  }
+
+  .col-4 {
+    grid-column: span 4;
+  }
+
+  .col-5 {
+    grid-column: span 5;
+  }
+
+  .col-6 {
+    grid-column: span 6;
+  }
+
+  .col-7 {
+    grid-column: span 7;
+  }
+
+  .col-8 {
+    grid-column: span 8;
+  }
+
+  .col-9 {
+    grid-column: span 9;
+  }
+
+  .col-10 {
+    grid-column: span 10;
+  }
+
+  .col-11 {
+    grid-column: span 11;
+  }
+
+  .col-12 {
+    grid-column: span 12;
+  }
+}
+
+//=== / COLUMNS ===//
+//=== Nested Containers ===//
+.container .container {
   width: 100%;
 }
-// === / NESTED CONTAINERS === //
+
+//=== /NESTED CONTAINERS ===//
+//=== OFFSETS ===//
+.col-4.offset-4,
+.col-8.offset-4,
+.col-9.offset-3,
+.col-10.offset-2{
+  grid-column-start: 1;
+  grid-column-end: 12;
+}
+@media screen and (min-width:$bp-md) {
+  .col-4.offset-4 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+  }
+
+  .col-9.offset-3 {
+    grid-column-start: 4;
+    grid-column-end: 10;
+  }
+
+  .col-10.offset-2 {
+    grid-column-start: 3;
+    grid-column-end: 11;
+  }
+}
+
+//=== /OFFSETS ===// 
