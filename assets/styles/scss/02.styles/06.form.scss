@@ -1,4 +1,6 @@
 //=== Forms ===/
+$form-padding: 32px;
+
 .form-group{
 	position: relative;
 	display: flex;
@@ -6,13 +8,16 @@
 	flex-wrap: wrap;
 	align-items: stretch;
 	width: 100%;
+	margin-bottom: $form-padding;
 	box-sizing: border-box;
-	input{
+	input,
+	textarea{
 		position: relative;
 		padding: 11px 8px;
 		flex: 1 1 auto;
 		position: relative;
 		color: color(neutral, 09);
+		font-family: $default-font-family;
 		font-size: $default-font-size;
 		font-weight: 300;
 		line-height: $default-line-height;

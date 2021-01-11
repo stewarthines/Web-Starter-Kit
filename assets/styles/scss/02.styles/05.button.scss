@@ -1,12 +1,16 @@
 
 // === BTN === //
-.btn{
+.btn,
+button.btn,
+input.btn{
 	display:inline-block;
 	color: $action-text;
 	padding: 11px 32px;
 	border: 1px solid $action-text;
 	border-radius: $default-border-radius;
 	line-height: 24px;
+	font-family: $default-font-family;
+	font-size: $default-font-size;
 	font-weight: 400;
 	text-align: center;
 	text-decoration: none;
@@ -30,7 +34,10 @@
 }
 // === BTN === //
 // === BTN PRIMARY === //
-.btn-primary{
+.btn-primary,
+a.btn-primary,
+button.btn-primary,
+input.btn-primary{
 	@extend .btn;
 	border: none;
 	background: color(action, 08);
