@@ -37,7 +37,8 @@ img {
 //=== /TESTING === //
 //=====================//
 //=== Small Screens ===//
-[class^='col-'] {
+[class^='col-'],
+[class^='offset-'] {
   grid-column: span 1;
 }
 
@@ -133,26 +134,37 @@ img {
 //=== /NESTED CONTAINERS ===//
 //=== OFFSETS ===//
 .col-4.offset-4,
-.col-8.offset-4,
-.col-9.offset-3,
+.col-8.offset-2,
 .col-10.offset-2{
-  grid-column-start: 1;
-  grid-column-end: 12;
+  grid-column: span 1;
 }
+
+@media screen and (min-width:767px) and (max-width: 1024px){
+  .col-4.offset-4,
+  .col-8.offset-2{
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  .col-10.offset-2{
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
 @media screen and (min-width:$bp-md) {
+
   .col-4.offset-4 {
     grid-column-start: 5;
     grid-column-end: 9;
   }
-
-  .col-9.offset-3 {
-    grid-column-start: 4;
-    grid-column-end: 10;
+  .col-8.offset-2{
+    grid-column-start: 3;    
+    grid-column-end: 11;
   }
 
-  .col-10.offset-2 {
-    grid-column-start: 3;
-    grid-column-end: 11;
+  .col-10.offset-1 {
+    grid-column-start: 2;
+    grid-column-end: 12;
   }
 }
 
