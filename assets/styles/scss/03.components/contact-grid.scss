@@ -1,40 +1,68 @@
 //== CONTACT GRID ===//
 // .contact-grid > .link > a > svg
-.contact-grid{
+.contact-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 0;
 	justify-content: center;
 	align-items: center;
-	.link a svg{
+
+	.link a svg {
 		fill: $action-text;
 		transition: all $default-transition-time-easing;
 	}
-	.link a{
+
+	.link a {
 		@extend .btn-minimal;
 		border: none;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		&:hover{
+
+		&:hover {
 			border: none;
 			background: darken(color(neutral, 01), 5%);
-			svg{
+
+			svg {
 				fill: color(action, 06);
 				transition: all $default-transition-time-easing;
 			}
 		}
 	}
-	@media screen and (min-width:600px) and (max-width:1023px){
+
+	@media screen and (min-width:600px) and (max-width:1023px) {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	@media screen and (min-width:1024px){
+
+	@media screen and (min-width:1024px) {
 		grid-template-columns: repeat(6, 1fr);
 	}
 }
+
 //== /CONTACT GRID ===//
 //=== FOOTER OVERRIDE ===//
-footer.the-footer .contact-grid{
-	background: orange;
+footer.the-footer .contact-grid {
+	grid-gap: 32px;
+	grid-template-columns: repeat(3, 1fr);
+	margin-bottom: 48px;
+
+	.link a {
+		padding: 12px;
+		color: $footer-text-color;
+		svg{
+			fill: $footer-text-color;	
+		}
+		&:hover,
+		&:focus {
+			border: none;
+			background: darken($the-footer-color, 2%);
+			
+			svg {
+				fill: color(neutral, 00);
+				transition: all $default-transition-time-easing;
+			}
+		}
+	}
 }
-//=== /FOOTER OVERRIDE ===//
+
+	//=== /FOOTER OVERRIDE ===//
